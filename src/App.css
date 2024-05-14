@@ -1,0 +1,89 @@
+/* Imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .bg-darken::before {
+        @apply absolute inset-0 bg-black opacity-50 content-[''];
+        z-index: -1;
+    }
+}
+
+@font-face {
+    font-family: 'Inter';
+}
+
+/* CSS HEX */
+:root {
+    --font: 'Inter';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0px;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--font);
+}
+
+a.active {
+    background: #26C24D;
+    color: white;
+    transition: 0.3s all;
+}
+
+
+a.active:hover {
+    background: #008A22;
+    ;
+    color: 'white';
+    /* Cor do texto do botão quando destacado */
+    transition: 0.3s all;
+}
+
+.sidebar-transition {
+    transition: all 0.3s ease-in-out;
+}
+
+
+.scroll {
+    overflow-y: auto;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: #7ad691;
+    border-radius: 50em;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background-color: rgba(50, 212, 91, 0.3);
+    border-radius: 50em;
+}
