@@ -26,40 +26,57 @@ export const GlobalStorage = ({ children }: any) => {
 
     async function LoginAct(email: string, password: string) {
         setLoad(true);
-        try {
-            const response = await fetch(`${URL}user/login`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    email,
-                    password
-                }),
-            });
-            console.log(response)
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
 
-            let data = await response.json();
-            data = data.result
-            console.log(data)
-
-
-            setLocalStorageData(data);
-            setData(data);
-            setLoad(false);
-            setLogin(true);
-
-
-            navigate('/home')
-        } catch (error) {
-            console.log(error);
+        if(email === 'admin' && password === 'admin'){
+        
+        const user:any = {
+            email: "admin",
+            name: "Admin",
+            token:"tokenadmin"
         }
+
+        setLocalStorageData(user);
+        console.log('aqui')
+        setData(user);
+        setLoad(false);
+        setLogin(true);
+        navigate('/home')
+        }
+        // try {
+        //     const response = await fetch(`${URL}user/login`, {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //         },
+        //         body: JSON.stringify({
+        //             email,
+        //             password
+        //         }),
+        //     });
+        //     console.log(response)
+        //     if (!response.ok) {
+        //         throw new Error(`HTTP error! status: ${response.status}`);
+        //     }
+
+        //     let data = await response.json();
+        //     data = data.result
+        //     console.log(data)
+
+
+        //     setLocalStorageData(data);
+        //     setData(data);
+        //     setLoad(false);
+        //     setLogin(true);
+
+
+        //     navigate('/home')
+        // } catch (error) {
+        //     console.log(error);
+        // }
     }
 
     function setLocalStorageData(data: any) {
+        console.log('aqui2')
         window.localStorage.setItem('$TOKEN', data.token);
         window.localStorage.setItem('$NAME', data.name);
         window.localStorage.setItem('$EMAIL', data.email);

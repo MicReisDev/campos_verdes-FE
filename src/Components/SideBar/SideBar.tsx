@@ -8,7 +8,7 @@ import logosvg from '/LogoSemEscrita.png'
 
 const SideBar = ({ children }: any) => {
 
-    const options = [{ nome: 'Home', path: '/home' }, { nome: 'Painel', path: '/painel' }, { nome: 'Dashboards', path: '/dashboard' }, { nome: 'Relatórios', path: '/relatorio' }, { nome: 'Documentação', path: '/documentacao' }]
+    const options = [{ nome: 'Home', path: '/home' }, { nome: 'Painel', path: '/painel' }, { nome: 'Relatórios', path: '/relatorio' }, { nome: 'Documentação', path: '/documentacao' }]
     const name = window.localStorage.getItem('$NAME')
     const email = window.localStorage.getItem('$EMAIL')
     let context = React.useContext(GlobalContext)
