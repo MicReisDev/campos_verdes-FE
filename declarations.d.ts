@@ -1,29 +1,11 @@
-declare module "*.jpg" {
-    const content: any;
-    return content;
-  }
+declare module "*.jpg" 
   
-  declare module "*.jpeg" {
-    const content: any;
-    return content;
-  }
+  declare module "*.jpeg" 
   
-  declare module "*.png" {
-    const content: any;
-    return content;
-  }
+  declare module "*.png" 
   
-  declare module "*.gif" {
-    const content: any;
-    return content;
-  }
+  declare module "*.gif" 
   
-  declare module "*.webp" {
-    const content: any;
-    return content;
-  }
+  declare module "*.webp" 
   
-  declare module "*.svg" {
-    const content: any;
-    return content;
-  }
+  declare module "*.svg" 
