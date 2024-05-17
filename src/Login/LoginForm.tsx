@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { GlobalContext } from '../GlobalContext'
-import logoIMG from '../../public/logosvg.svg'
+import logoIMG from '/logosvg.svg'
+
 const LoginUser = () => {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
