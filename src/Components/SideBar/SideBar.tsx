@@ -3,7 +3,6 @@ import React from "react"
 import logodash from '/logodash.svg'
 import { NavLink } from "react-router-dom"
 import { GlobalContext } from "../../GlobalContext"
-import bcilogo from '/bcilogo.svg'
 import logosvg from '/LogoSemEscrita.png'
 
 const SideBar = ({ children }: any) => {
@@ -169,7 +168,7 @@ const SideBar = ({ children }: any) => {
                     </div>
                 </div>
                 <div className="flex flex-col items-center">
-                    <img src={bcilogo} width='120' alt="" />
+                 
                 </div>
             </div>
             <div className={toggles ? "w-full h-full bg-gray-50 shadow-inner overflow-auto scroll" : "w-full h-full col-start-3 col-end-13 bg-gray-50 shadow-inner overflow-auto scroll"}>
